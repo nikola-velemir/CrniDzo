@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Ultra';
+    src: url('/src/assets/fonts/Ultra/Ultra-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('/src/assets/fonts/Outfit/static/Outfit-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'Outfit';
+    letter-spacing: 1px;
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust the alpha value as needed */
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    z-index: 200;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+.navbar *{
+    color: white;
+}
+body{
+    background-color: #272727;
+}
+.navbar-nav .nav-link.active{
+    font-weight: 600;
+}
+.navbar .navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+.navbar .navbar-brand>img{
+    background-color: transparent !important;
+    height: 60px;
+}
+.navbar>.container-fluid{
+    width: 80%;
+}
+.navbar .nav-link{
+    color:#F1F1F1;
+    font-size: 18px;
+    
+}
+.navbar .nav-link:hover{
+    color: #fff;
+}
