@@ -60,9 +60,7 @@ body {
 .navbar .nav-link:hover {
   color: #fff;
 }
-.navbar button.navbar-toggler span {
-  background-image: url("/src/assets/images/misc/menu.png");
-}
+
 .navbar.navbar-expand-lg > .container-fluid {
   width: auto;
 }

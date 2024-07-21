@@ -1,24 +1,22 @@
 import { useContext, useState } from "react";
 import { LogoContext } from "../Context/Providers/LogoContext";
-import { NavbarLinkContext } from "../Context/Providers/NavbarLinkContext";
 import NavbarLogo from "./NavbarLogo";
+import NavbarLinks from "./NavbarLinks";
+import { NavbarLinkContext } from "../Context/Providers/NavbarLinkContext";
+import NavbarButton from "./NavbarButton";
 
 type NavbarProps = {
   currentPage?: number;
 };
 
-const CapitalizeTitle = (str: string) => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
-
-const Navbar = ({ currentPage = 0 }: NavbarProps) => {
-  const links = useContext(NavbarLinkContext);
+const Navbar = ({}: NavbarProps) => {
   const logoContext = useContext(LogoContext);
+  const links = useContext(NavbarLinkContext);
   const [logoHover, setlogoHover] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href={links[0].link}>
           <NavbarLogo
             src={logoHover ? logoContext.highlighted : logoContext.logo}
             alt={logoContext.alt}
@@ -30,35 +28,9 @@ const Navbar = ({ currentPage = 0 }: NavbarProps) => {
             }}
           ></NavbarLogo>
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <NavbarButton></NavbarButton>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            {links.map(({ name, link }, index) => {
-              return (
-                <li key={name} className="nav-item">
-                  <a
-                    className={
-                      index === currentPage ? "nav-link active" : "nav-link"
-                    }
-                    aria-current="page"
-                    href={link}
-                  >
-                    {CapitalizeTitle(name)}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <NavbarLinks links={links} currentPage={0}></NavbarLinks>{" "}
         </div>
       </div>
     </nav>
