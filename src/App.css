@@ -1,53 +1,81 @@
 @font-face {
-    font-family: 'Ultra';
-    src: url('/src/assets/fonts/Ultra/Ultra-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Ultra";
+  src: url("/src/assets/fonts/Ultra/Ultra-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Outfit';
-    src: url('/src/assets/fonts/Outfit/static/Outfit-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Outfit";
+  src: url("/src/assets/fonts/Outfit/static/Outfit-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
-*{
-    font-family: 'Outfit';
-    letter-spacing: 1px;
+* {
+  font-family: "Outfit";
+  letter-spacing: 1px;
 }
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust the alpha value as needed */
-    position: fixed;
-    display: flex;
-    overflow: hidden;
-    z-index: 200;
-    width: 100%;
-    backdrop-filter: blur(10px);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ) !important; /* Adjust the alpha value as needed */
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  z-index: 200;
+  width: 100%;
+  backdrop-filter: blur(10px);
 }
-.navbar *{
-    color: white;
+.navbar * {
+  color: white;
 }
-body{
-    background-color: #272727;
+body {
+  background-color: #272727;
 }
-.navbar-nav .nav-link.active{
-    font-weight: 600;
+.navbar-nav .nav-link.active {
+  font-weight: 600;
 }
 .navbar .navbar-brand {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-.navbar .navbar-brand>img{
-    background-color: transparent !important;
-    height: 60px;
+.navbar .navbar-brand > img {
+  background-color: transparent !important;
+  height: 60px;
+  transition: opacity 0.5s ease;
 }
-.navbar>.container-fluid{
-    width: 80%;
+.navbar .navbar-brand > img.fade-out {
+  opacity: 0;
 }
-.navbar .nav-link{
-    color:#F1F1F1;
-    font-size: 18px;
-    
+
+.navbar .navbar-brand > img.fade-in {
+  opacity: 1;
 }
-.navbar .nav-link:hover{
-    color: #fff;
+.navbar .nav-link {
+  color: #f1f1f1;
+  font-size: 18px;
+}
+.navbar .nav-link:hover {
+  color: #fff;
+}
+.navbar button.navbar-toggler span {
+  background-image: url("/src/assets/images/misc/menu.png");
+}
+.navbar.navbar-expand-lg > .container-fluid {
+  width: auto;
+}
+.navbar.navbar-expand-lg > .container-fluid > .navbar-brand {
+  margin: 0px 10px 0px 10px;
+}
+.navbar.navbar-expand-lg > .container-fluid .navbar-nav .nav-item {
+  margin: 0rem 2rem;
+  white-space: nowrap;
+}
+.carousel-control-next-icon {
+  background-image: url("/src/assets/images/misc/right-arrow.png");
+}
+.carousel-control-prev-icon {
+  background-image: url("/src/assets/images/misc/left-arrow.png");
 }

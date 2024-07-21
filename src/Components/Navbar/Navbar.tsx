@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LogoContext } from "../Context/Providers/LogoContext";
+import { NavbarLinkContext } from "../Context/Providers/NavbarLinkContext";
+import NavbarLogo from "./NavbarLogo";
 
 type NavbarProps = {
-  links: { name: string; link: string }[];
   currentPage?: number;
 };
 
@@ -10,13 +11,24 @@ const CapitalizeTitle = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-const Navbar = ({ links, currentPage = 0 }: NavbarProps) => {
+const Navbar = ({ currentPage = 0 }: NavbarProps) => {
+  const links = useContext(NavbarLinkContext);
   const logoContext = useContext(LogoContext);
+  const [logoHover, setlogoHover] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src={logoContext.logo} alt={logoContext.alt} />
+          <NavbarLogo
+            src={logoHover ? logoContext.highlighted : logoContext.logo}
+            alt={logoContext.alt}
+            onLeave={() => {
+              setlogoHover(false);
+            }}
+            onEnter={() => {
+              setlogoHover(true);
+            }}
+          ></NavbarLogo>
         </a>
         <button
           className="navbar-toggler"
