@@ -56,6 +56,7 @@ body {
 .navbar .nav-link {
   color: #f1f1f1;
   font-size: 18px;
+  text-align: center;
 }
 .navbar .nav-link:hover {
   color: #fff;
@@ -76,4 +77,9 @@ body {
 }
 .carousel-control-prev-icon {
   background-image: url("/src/assets/images/misc/left-arrow.png");
+}
+@media only screen and (max-width: 990px) {
+  .navbar.navbar-expand-lg > .container-fluid {
+    width: 100%;
+  }
 }

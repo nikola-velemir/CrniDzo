@@ -16,22 +16,19 @@ const Navbar = ({}: NavbarProps) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href={links[0].link}>
-          <NavbarLogo
-            src={logoHover ? logoContext.highlighted : logoContext.logo}
-            alt={logoContext.alt}
-            onLeave={() => {
-              setlogoHover(false);
-            }}
-            onEnter={() => {
-              setlogoHover(true);
-            }}
-          ></NavbarLogo>
-        </a>
+        <NavbarLogo
+          src={logoHover ? logoContext.highlighted : logoContext.logo}
+          alt={logoContext.alt}
+          onLeave={() => {
+            setlogoHover(false);
+          }}
+          onEnter={() => {
+            setlogoHover(true);
+          }}
+          link={links[0].link}
+        ></NavbarLogo>
         <NavbarButton></NavbarButton>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <NavbarLinks links={links} currentPage={0}></NavbarLinks>{" "}
-        </div>
+        <NavbarLinks links={links} currentPage={0}></NavbarLinks>
       </div>
     </nav>
   );
