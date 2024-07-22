@@ -9,27 +9,28 @@ type NavbarLogoProps = {
 };
 
 const NavbarLogo = ({ src, alt, link, onEnter, onLeave }: NavbarLogoProps) => {
-  const [fadeClass, setFadeClass] = useState("fade-out");
+  const [fadeClass, setFadeClass] = useState("fade-in");
+  const [currentSrc, setCurrentSrc] = useState(src);
 
   useEffect(() => {
-    setFadeClass("fade-out");
-    const timer = setTimeout(() => {
-      setFadeClass("fade-in");
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [src]);
+    if (currentSrc !== src) {
+      setFadeClass("fade-out");
+      const timer = setTimeout(() => {
+        setCurrentSrc(src);
+        setFadeClass("fade-in");
+      }, 200); // Duration of the fade-out transition
+
+      return () => clearTimeout(timer);
+    }
+  }, [src, currentSrc]);
+
   return (
-    <a className="navbar-brand" href={link}>
+    <a className={`navbar-brand logo ${fadeClass}`} href={link}>
       <img
-        src={src}
+        src={currentSrc}
         alt={alt}
-        className={fadeClass}
-        onMouseEnter={() => {
-          onEnter();
-        }}
-        onMouseOut={() => {
-          onLeave();
-        }}
+        onMouseEnter={onEnter}
+        onMouseOut={onLeave}
       />
     </a>
   );

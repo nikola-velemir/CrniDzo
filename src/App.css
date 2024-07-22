@@ -41,16 +41,19 @@ body {
   padding: 0;
   margin: 0;
 }
-.navbar .navbar-brand > img {
+.navbar .navbar-brand img {
   background-color: transparent !important;
   height: 60px;
-  transition: opacity 0.5s ease;
 }
-.navbar .navbar-brand > img.fade-out {
+.navbar .navbar-brand.logo {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.navbar .navbar-brand.logo.fade-out {
   opacity: 0;
 }
 
-.navbar .navbar-brand > img.fade-in {
+.navbar .navbar-brand.logo.fade-in {
   opacity: 1;
 }
 .navbar .nav-link {

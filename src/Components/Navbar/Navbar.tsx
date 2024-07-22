@@ -9,26 +9,23 @@ type NavbarProps = {
   currentPage?: number;
 };
 
-const Navbar = ({}: NavbarProps) => {
+const Navbar = ({ currentPage = 0 }: NavbarProps) => {
   const logoContext = useContext(LogoContext);
   const links = useContext(NavbarLinkContext);
-  const [logoHover, setlogoHover] = useState(false);
+  const [logoHover, setLogoHover] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <NavbarLogo
           src={logoHover ? logoContext.highlighted : logoContext.logo}
           alt={logoContext.alt}
-          onLeave={() => {
-            setlogoHover(false);
-          }}
-          onEnter={() => {
-            setlogoHover(true);
-          }}
+          onLeave={() => setLogoHover(false)}
+          onEnter={() => setLogoHover(true)}
           link={links[0].link}
-        ></NavbarLogo>
-        <NavbarButton></NavbarButton>
-        <NavbarLinks links={links} currentPage={0}></NavbarLinks>
+        />
+        <NavbarButton />
+        <NavbarLinks links={links} currentPage={currentPage} />
       </div>
     </nav>
   );
