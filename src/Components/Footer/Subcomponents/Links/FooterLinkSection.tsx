@@ -7,8 +7,9 @@ const FooterLinkSection = () => {
   return (
     <div className="col-lg-3">
       <div className="row">
+        <div className="col-12 footer-section-title">Istrazi</div>
         <div className="col-12">
-          <ul className="list-group footer-link-list">
+          <ul className="list-group footer-list">
             {linkContext.map(({ name, link }) => {
               return (
                 <FooterLink

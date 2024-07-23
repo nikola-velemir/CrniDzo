@@ -1,6 +1,7 @@
+import FooterContactSection from "./Subcomponents/Contact/FooterContactSection";
 import FooterInfoSection from "./Subcomponents/Info/FooterInfoSection";
 import FooterLinkSection from "./Subcomponents/Links/FooterLinkSection";
-import FooterSocialMediaSection from "./Subcomponents/FooterSocialMediaSection";
+import FooterSocialMediaSection from "./Subcomponents/SocialMedia/FooterSocialMediaSection";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <FooterInfoSection></FooterInfoSection>
         <FooterSocialMediaSection></FooterSocialMediaSection>
         <FooterLinkSection></FooterLinkSection>
-        <div className="col-lg-3">Column</div>
+        <FooterContactSection></FooterContactSection>
       </div>
     </footer>
   );
