@@ -41,6 +41,9 @@ body {
   padding: 0;
   margin: 0;
 }
+.navbar .navbar-brand :hover {
+  background-color: white;
+}
 .navbar .navbar-brand img {
   background-color: transparent !important;
   height: 60px;
@@ -56,23 +59,83 @@ body {
 .navbar .navbar-brand.logo.fade-in {
   opacity: 1;
 }
-.navbar .nav-link {
-  color: #f1f1f1;
-  font-size: 18px;
-  text-align: center;
+.nav-item:has(.nav-link.nav-link.active) {
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    left: 5%;
+    background-color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+
+  &:hover {
+    .nav-link {
+      color: #2d2d2d;
+    }
+
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
 }
-.navbar .nav-link:hover {
-  color: #fff;
+.nav-item {
+  text-align: center;
+
+  display: block;
+  padding: 1rem 1.25rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
+  &:after {
+    content: "";
+    display: block;
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    left: 5%;
+    background-color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+
+  &:hover {
+    .nav-link {
+      color: #2d2d2d;
+    }
+
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+.nav-link.active:hover {
+  color: #2d2d2d;
 }
 
 .navbar.navbar-expand-lg > .container-fluid {
   width: auto;
 }
 .navbar.navbar-expand-lg > .container-fluid > .navbar-brand {
-  margin: 0px 10px 0px 10px;
+  margin: 0rem 0.5rem;
+  padding: 0rem 0.5rem;
 }
 .navbar.navbar-expand-lg > .container-fluid .navbar-nav .nav-item {
-  margin: 0rem 2rem;
+  padding: 0rem 2rem;
   white-space: nowrap;
 }
 .carousel-control-next-icon {
@@ -85,4 +148,33 @@ body {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
   }
+  .nav-item {
+    &::after {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+footer * {
+  color: white !important;
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.footer-logo {
+  width: 60%;
+}
+footer .row {
+  width: 100%;
+  position: relative;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  padding: 0.5rem;
+}
+footer .footer-link-icon {
+  max-width: 7.5rem;
+  min-width: 2.5rem;
+  margin: 0 auto;
+  display: block;
+  background-color: transparent;
 }
