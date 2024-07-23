@@ -161,6 +161,10 @@ body {
 .carousel-control-prev-icon {
   background-image: url("/src/assets/images/misc/left-arrow.png");
 }
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
 @media only screen and (max-width: 990px) {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
@@ -195,10 +199,9 @@ footer > .row {
   padding: 1.5rem;
 }
 footer .footer-link-icon {
-  max-width: 7.5rem;
+  max-width: 7rem;
   min-width: 2.5rem;
   margin: 0 auto;
-  margin-left: 0;
   display: block;
   background-color: transparent;
 }
@@ -225,4 +228,83 @@ footer .footer-link-icon {
 
 .footer-link-icon img.fade-in {
   opacity: 1;
+}
+.work-time-info > div:first-child {
+  border-bottom: 2px #fff solid;
+}
+.work-time-info > div:first-child div {
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+.work-time-info > div > div {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+.work-time-info > div {
+  padding: 0.25rem;
+}
+.footer-link-list {
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.footer-link-list .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: unset;
+}
+.footer-link-list .list-group-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+.footer-link-list .list-group-item a > div {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.footer-link-list .list-group-item a > div::after {
+  content: "";
+  background: white;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+.footer-link-list .list-group-item a > div:hover::after {
+  width: calc(100%);
+}
+.footer-link-list .list-group-item a > div > div {
+  display: grid;
+  justify-content: end;
+}
+
+.footer-link-list .list-group-item a > div > div:first-child {
+  display: grid;
+  width: 100%;
+  text-align: left;
+  justify-content: left;
+}
+.footer-link-list .list-group-item a > div img {
+  width: auto;
+  height: 25px;
+}
+/* .footer-link-list .list-group-item > div:hover {
+  background-color: white;
+  transition: background-color 0.3s ease;
+} */
+.footer-link-list .list-group-item a > div:hover > div {
+  color: #272727 !important;
 }

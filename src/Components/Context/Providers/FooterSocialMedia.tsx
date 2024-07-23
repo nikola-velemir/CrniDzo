@@ -1,18 +1,18 @@
 import { createContext, ReactNode } from "react";
-import { footer_links } from "../Raw/footer_links";
+import { footer_social_media } from "../Raw/footer_social_media";
 
 type FooterLinkContextProviderProps = {
   children: ReactNode;
 };
 
-export const FooterLinkContext = createContext(footer_links);
+export const FooterSocialMediaContext = createContext(footer_social_media);
 
 export const FooterLinkContextProvider = ({
   children,
 }: FooterLinkContextProviderProps) => {
   return (
-    <FooterLinkContext.Provider value={footer_links}>
+    <FooterSocialMediaContext.Provider value={footer_social_media}>
       {children}
-    </FooterLinkContext.Provider>
+    </FooterSocialMediaContext.Provider>
   );
 };

@@ -6,7 +6,11 @@ type FooterLinkProps = {
   icon_hovered: string;
 };
 
-const FooterLink = ({ link, icon_regular, icon_hovered }: FooterLinkProps) => {
+const FooterSocialMedia = ({
+  link,
+  icon_regular,
+  icon_hovered,
+}: FooterLinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const icons = [icon_regular, icon_hovered];
   const effectClasses = ["fade-in", "fade-out"];
@@ -41,4 +45,4 @@ const FooterLink = ({ link, icon_regular, icon_hovered }: FooterLinkProps) => {
   );
 };
 
-export default FooterLink;
+export default FooterSocialMedia;

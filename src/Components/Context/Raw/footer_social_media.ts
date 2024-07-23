@@ -2,7 +2,7 @@ import facebook from "../../../assets/icons/icon-facebook.svg";
 import facebook_hover from "../../../assets/icons/icon-facebook-hovered.svg";
 import instagram from "../../../assets/icons/icon-instagram.svg";
 import instagram_hovered from "../../../assets/icons/icon-instagram-hovered.svg";
-export const footer_links = [
+export const footer_social_media = [
   {
     link: "https://www.instagram.com/crnidzo_/",
     regular: instagram,

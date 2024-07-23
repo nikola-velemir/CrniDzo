@@ -4,6 +4,10 @@ const links = [
     link: "http://localhost:5173",
   },
   {
+    name: "mENI",
+    link: "https//localhost:5173",
+  },
+  {
     name: "O nama",
     link: "#",
   },

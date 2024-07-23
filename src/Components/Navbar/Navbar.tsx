@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { LogoContext } from "../Context/Providers/LogoContext";
 import NavbarBrand from "./Subcomponents/NavbarBrand";
 import NavbarLinks from "./Subcomponents/NavbarLinks";
-import { NavbarLinkContext } from "../Context/Providers/NavbarLinkContext";
+import { LinkContext } from "../Context/Providers/LinkContext";
 import NavbarButton from "./Subcomponents/NavbarButton";
 
 type NavbarProps = {
@@ -11,7 +11,7 @@ type NavbarProps = {
 
 const Navbar = ({ currentPage = 0 }: NavbarProps) => {
   const logoContext = useContext(LogoContext);
-  const links = useContext(NavbarLinkContext);
+  const links = useContext(LinkContext);
   const [logoHover, setLogoHover] = useState(false);
 
   return (

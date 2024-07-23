@@ -1,11 +1,11 @@
+import { Capitalize } from "../../../Utils/utils";
+
 type NavbarLinksProps = {
   links: { name: string; link: string }[];
   currentPage: number;
 };
 
-const CapitalizeTitle = (str: string) => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
+// Example usage
 
 const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
   return (
@@ -21,7 +21,7 @@ const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
                 aria-current="page"
                 href={link}
               >
-                {CapitalizeTitle(name)}
+                {Capitalize(name)}
               </a>
             </li>
           );
