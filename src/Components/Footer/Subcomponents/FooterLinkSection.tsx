@@ -6,9 +6,14 @@ const FooterLinkSection = () => {
   const links = useContext(FooterLinkContext);
   return (
     <div className="col-lg-4">
-      {links.map(({ regular }) => {
+      {links.map(({ link, regular, hover }, index) => {
         return (
-          <FooterLink link={regular.link} icon={regular.icon}></FooterLink>
+          <FooterLink
+            key={index}
+            link={link}
+            icon_regular={regular}
+            icon_hovered={hover}
+          ></FooterLink>
         );
       })}
     </div>

@@ -175,6 +175,31 @@ footer .footer-link-icon {
   max-width: 7.5rem;
   min-width: 2.5rem;
   margin: 0 auto;
+  margin-left: 0;
   display: block;
   background-color: transparent;
+}
+.footer-link-icon {
+  display: block;
+  position: relative;
+}
+.footer-link-icon img {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.footer-link-icon img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-link-icon img.fade-out {
+  opacity: 0;
+}
+
+.footer-link-icon img.fade-in {
+  opacity: 1;
 }
