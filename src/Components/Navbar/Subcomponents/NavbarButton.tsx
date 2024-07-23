@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavbarButtonContext } from "../Context/Providers/NavbarButtonContext";
+import { NavbarButtonContext } from "../../Context/Providers/NavbarButtonContext";
 
 const NavbarButton = () => {
   let buttonContext = useContext(NavbarButtonContext);

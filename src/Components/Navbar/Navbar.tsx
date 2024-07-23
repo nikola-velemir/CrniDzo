@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { LogoContext } from "../Context/Providers/LogoContext";
-import NavbarLogo from "./NavbarLogo";
-import NavbarLinks from "./NavbarLinks";
+import NavbarBrand from "./Subcomponents/NavbarBrand";
+import NavbarLinks from "./Subcomponents/NavbarLinks";
 import { NavbarLinkContext } from "../Context/Providers/NavbarLinkContext";
-import NavbarButton from "./NavbarButton";
+import NavbarButton from "./Subcomponents/NavbarButton";
 
 type NavbarProps = {
   currentPage?: number;
@@ -17,7 +17,7 @@ const Navbar = ({ currentPage = 0 }: NavbarProps) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <NavbarLogo
+        <NavbarBrand
           src={logoHover ? logoContext.highlighted : logoContext.logo}
           alt={logoContext.alt}
           onLeave={() => setLogoHover(false)}

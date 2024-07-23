@@ -8,7 +8,7 @@ type NavbarLogoProps = {
   onLeave: () => void;
 };
 
-const NavbarLogo = ({ src, alt, link, onEnter, onLeave }: NavbarLogoProps) => {
+const NavbarBrand = ({ src, alt, link, onEnter, onLeave }: NavbarLogoProps) => {
   const [fadeClass, setFadeClass] = useState("fade-in");
   const [currentSrc, setCurrentSrc] = useState(src);
 
@@ -25,15 +25,16 @@ const NavbarLogo = ({ src, alt, link, onEnter, onLeave }: NavbarLogoProps) => {
   }, [src, currentSrc]);
 
   return (
-    <a className={`navbar-brand logo ${fadeClass}`} href={link}>
-      <img
-        src={currentSrc}
-        alt={alt}
-        onMouseEnter={onEnter}
-        onMouseOut={onLeave}
-      />
+    <a
+      className={`navbar-brand logo ${fadeClass}`}
+      href={link}
+      onMouseEnter={onEnter}
+      onMouseOut={onLeave}
+    >
+      <img src={currentSrc} alt={alt} />
+      <div className="company-name-display">Crni Dzo</div>
     </a>
   );
 };
 
-export default NavbarLogo;
+export default NavbarBrand;

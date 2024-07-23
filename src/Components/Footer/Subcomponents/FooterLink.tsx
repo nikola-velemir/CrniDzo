@@ -25,6 +25,7 @@ const FooterLink = ({ link, icon_regular, icon_hovered }: FooterLinkProps) => {
         {icons.map((icon, index) => {
           return (
             <img
+              key={index}
               className={`${
                 !isHovered
                   ? effectClasses[index % 2]
