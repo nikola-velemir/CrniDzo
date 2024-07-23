@@ -165,21 +165,7 @@ body {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
 }
-@media only screen and (max-width: 990px) {
-  .navbar.navbar-expand-lg > .container-fluid {
-    width: 100%;
-  }
-  .nav-item {
-    &::after {
-      left: 0;
-      right: 0;
-    }
-  }
 
-  .navbar .navbar-brand .company-name-display {
-    display: grid;
-  }
-}
 footer {
   border-top: 2px solid white;
   background-color: #272727;
@@ -193,7 +179,6 @@ footer * {
 
 .footer-logo {
   width: 60%;
-  margin: 0 auto;
   display: block;
 }
 footer .row {
@@ -204,7 +189,6 @@ footer .row {
   padding: 0.5rem;
 }
 footer .footer-link-icon {
-  margin: 0 auto;
   max-width: 7rem;
   min-width: 2.5rem;
   display: flex;
@@ -237,24 +221,8 @@ footer .footer-link-icon {
 .footer-link-icon img.fade-in {
   opacity: 1;
 }
-.work-time-info > div:first-child {
-  border-bottom: 2px #fff solid;
-}
-.work-time-info > div:first-child div {
-  font-size: 1.5rem;
-  width: 100%;
-  margin: 0;
-  display: grid;
-  place-items: center;
-}
-.work-time-info > div > div {
-  width: 100%;
-  margin: 0;
-  display: grid;
-  place-items: center;
-}
-.work-time-info > div {
-  padding: 0.25rem;
+.work-time-info {
+  font-size: 1.1rem;
 }
 .footer-list {
   border: none;
@@ -384,4 +352,29 @@ footer .footer-link-icon {
 }
 .contanct-icon-container div.fade-in {
   opacity: 1;
+}
+@media only screen and (max-width: 990px) {
+  .navbar.navbar-expand-lg > .container-fluid {
+    width: 100%;
+  }
+  .nav-item {
+    &::after {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .navbar .navbar-brand .company-name-display {
+    display: grid;
+  }
+  .footer-section-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  footer > .row > div {
+    border-bottom: 2px solid white;
+  }
+  footer .footer-link-icon {
+    margin: 0 auto;
+  }
 }
