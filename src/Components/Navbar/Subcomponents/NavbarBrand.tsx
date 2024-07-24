@@ -1,38 +1,40 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type NavbarLogoProps = {
-  src: string;
+  src_regular: string;
+  src_hover: string;
   alt: string;
   link: string;
-  onEnter: () => void;
-  onLeave: () => void;
 };
 
-const NavbarBrand = ({ src, alt, link, onEnter, onLeave }: NavbarLogoProps) => {
-  const [fadeClass, setFadeClass] = useState("fade-in");
-  const [currentSrc, setCurrentSrc] = useState(src);
-
-  useEffect(() => {
-    if (currentSrc !== src) {
-      setFadeClass("fade-out");
-      const timer = setTimeout(() => {
-        setCurrentSrc(src);
-        setFadeClass("fade-in");
-      }, 200); // Duration of the fade-out transition
-
-      return () => clearTimeout(timer);
-    }
-  }, [src, currentSrc]);
+const NavbarBrand = ({
+  src_regular,
+  src_hover,
+  alt,
+  link,
+}: NavbarLogoProps) => {
+  const [hover, setHover] = useState(false);
+  const fadeClasses = ["fade-in", "fade-out"];
 
   return (
     <a
-      className={`navbar-brand logo ${fadeClass}`}
+      className={`navbar-brand logo`}
       href={link}
-      onMouseEnter={onEnter}
-      onMouseOut={onLeave}
+      onMouseOver={() => {
+        setHover(true);
+      }}
+      onMouseOut={() => {
+        setHover(false);
+      }}
     >
-      <img src={currentSrc} alt={alt} />
-      <div className="company-name-display">Crni Dzo</div>
+      <div className={hover ? fadeClasses[1] : fadeClasses[0]}>
+        <img src={src_regular} alt={alt} />
+        <div className="company-name-display">Crni Dzo</div>
+      </div>
+      <div className={hover ? fadeClasses[0] : fadeClasses[1]}>
+        <img src={src_hover} alt={alt} />
+        <div className="company-name-display">Crni Dzo</div>
+      </div>
     </a>
   );
 };

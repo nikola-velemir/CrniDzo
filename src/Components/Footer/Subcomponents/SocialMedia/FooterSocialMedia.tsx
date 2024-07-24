@@ -19,7 +19,7 @@ const FooterSocialMedia = ({
       <a
         className="footer-link-icon"
         href={link}
-        onMouseEnter={() => {
+        onMouseOver={() => {
           setIsHovered(true);
         }}
         onMouseLeave={() => {

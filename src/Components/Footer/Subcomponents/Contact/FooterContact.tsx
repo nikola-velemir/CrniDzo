@@ -19,7 +19,7 @@ const FooterContact = ({
   return (
     <li
       className="list-group-item footer-contact"
-      onMouseEnter={() => {
+      onMouseMove={() => {
         setHover(true);
       }}
       onMouseLeave={() => {

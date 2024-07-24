@@ -40,7 +40,7 @@ body {
 .navbar .navbar-brand {
   padding: 0;
   margin: 0;
-  display: flex;
+  display: block;
   height: 100%;
 }
 .navbar .navbar-brand > * {
@@ -53,27 +53,29 @@ body {
   font-family: "Ultra";
   font-size: 120%;
   display: none;
-  transition: 0.3s ease-in-out;
-}
-.navbar .navbar-brand:hover .company-name-display {
-  color: #fa943c;
-}
-.navbar .navbar-brand :hover {
-  background-color: white;
+  padding: 1rem;
 }
 .navbar .navbar-brand img {
   background-color: transparent !important;
   height: 60px;
 }
-.navbar .navbar-brand.logo {
+.navbar .navbar-brand.logo > div {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
+  display: flex;
 }
-.navbar .navbar-brand.logo.fade-out {
+.navbar .navbar-brand.logo > div.fade-out {
   opacity: 0;
 }
 
-.navbar .navbar-brand.logo.fade-in {
+.navbar .navbar-brand.logo > div:first-child .company-name-display {
+  color: #ffffff;
+}
+.navbar .navbar-brand.logo > div:nth-child(2) .company-name-display {
+  color: #fa943c;
+}
+
+.navbar .navbar-brand.logo > div.fade-in {
   opacity: 1;
 }
 .nav-item:has(.nav-link.nav-link.active) {
@@ -148,8 +150,23 @@ body {
   width: auto;
 }
 .navbar.navbar-expand-lg > .container-fluid > .navbar-brand {
-  margin: 0rem 0.5rem;
-  padding: 0rem 0.5rem;
+  padding: 0rem 1rem;
+  position: relative;
+}
+.navbar.navbar-expand-lg > .container-fluid > .navbar-brand > div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+.navbar.navbar-expand-lg > .container-fluid > .navbar-brand > div:nth-child(2) {
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0;
+  color: #fa943c;
 }
 .navbar.navbar-expand-lg > .container-fluid .navbar-nav .nav-item {
   padding: 0rem 2rem;
