@@ -1,3 +1,11 @@
+:root {
+  --viewport-height: 100vh;
+  --viewport-width: 100vw;
+  --aspect-ratio: calc(var(--viewport-height) / var(--viewport-width));
+  --rotation-angle: calc(
+    atan(var(--aspect-ratio)) * 1deg
+  ); /* Approximation for demo purposes */
+}
 @font-face {
   font-family: "Ultra";
   src: url("/src/assets/fonts/Ultra/Ultra-Regular.ttf");
@@ -61,7 +69,7 @@ body {
 }
 .navbar .navbar-brand.logo > div {
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   display: flex;
 }
 .navbar .navbar-brand.logo > div.fade-out {
@@ -220,7 +228,7 @@ footer .footer-link-icon {
 }
 .footer-link-icon img {
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .footer-link-icon img:nth-child(2) {
   position: absolute;
@@ -342,7 +350,7 @@ footer .footer-link-icon {
 .contanct-icon-container div {
   opacity: 1;
   display: flex;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .footer-list .list-group-item.footer-contact:hover > div > div:nth-child(2) {
   color: #272727 !important;
@@ -370,6 +378,156 @@ footer .footer-link-icon {
 .contanct-icon-container div.fade-in {
   opacity: 1;
 }
+.page-banner {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.page-banner-filter {
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.page-banner-filter > div {
+  width: 100%;
+  display: block;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.page-banner-filter > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.page-banner-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+}
+.page-banner-strip {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 40%;
+  max-width: unset;
+  top: 50%;
+  left: 50%;
+  background-color: #f59846;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+.page-banner-strip > div {
+  width: 100%;
+  height: 50%;
+  background-color: #272727;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+}
+.page-banner-cta {
+  height: 100%;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+}
+.page-banner-cta > div {
+  padding: 10%;
+}
+.page-banner-cta h1 {
+  font-family: "Ultra";
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+.page-banner-info {
+  height: 100%;
+  background-color: transparent;
+}
+.page-banner-image {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.page-banner-cta-text {
+  width: 100%;
+  color: white;
+}
+.page-banner-cta-button {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.page-banner-cta-button > .btn {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: unset;
+}
+
+.page-banner-cta-button .banner-cta-button-content:first-child {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.page-banner-cta-button .banner-cta-button-content:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #272727;
+  border: 2px solid #272727;
+}
+.banner-cta-button-content {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  color: #fff;
+  border: #fff 2px solid;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+.banner-cta-button-content.fade-in {
+  opacity: 1;
+}
+
+.banner-cta-button-content.fade-out {
+  opacity: 0;
+}
+.banner-cta-button-content img {
+  height: 100%;
+  width: 100%;
+}
+
+.banner-cta-button-content div {
+  height: 3rem;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 990px) {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
