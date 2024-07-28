@@ -16,7 +16,7 @@ const BannerCtaButton = ({
     <div className="page-banner-cta-button">
       <button
         type="button"
-        className="btn"
+        className="btn my-btn"
         onMouseOver={() => {
           setIsHovered(true);
         }}

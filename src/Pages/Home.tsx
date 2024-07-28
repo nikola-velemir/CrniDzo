@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CarouselImageContext } from "../Components/Context/Providers/CarouselImageContext";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
-import PageBanner from "../Components/Hero/PageBanner";
+import PageBanner from "../Components/Hero/Banner/PageBanner";
 
 const Home = () => {
   const imageContext = useContext(CarouselImageContext);

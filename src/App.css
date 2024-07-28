@@ -380,7 +380,7 @@ footer .footer-link-icon {
 }
 .page-banner {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   display: block;
   overflow: hidden;
   position: relative;
@@ -462,6 +462,68 @@ footer .footer-link-icon {
   height: 100%;
   background-color: transparent;
 }
+.page-banner-info > div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 10%;
+}
+.banner-card {
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  color: #fff;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+}
+
+.banner-card:hover {
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+  box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
+.card-title-cta {
+  border-bottom: 2px solid #fff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-title {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: "Ultra";
+}
+.banner-card .card-body {
+  padding: 1.5rem;
+}
+.card-title-cta div {
+  height: 100%;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+.card-title-cta div a {
+  height: 100%;
+}
+.card-text {
+  margin: 0;
+  padding: 0.5rem;
+}
+.banner-card .card-body {
+  background-color: transparent;
+}
 .page-banner-image {
   width: 100%;
   display: block;
@@ -470,42 +532,44 @@ footer .footer-link-icon {
 .page-banner-cta-text {
   width: 100%;
   color: white;
+  text-align: center;
 }
 .page-banner-cta-button {
   width: 100%;
   display: grid;
   place-items: center;
 }
-.page-banner-cta-button > .btn {
-  width: 100%;
+.my-btn {
   display: block;
   position: relative;
-  padding: unset;
+  padding: 0.5rem;
+  background-color: transparent;
 }
 
-.page-banner-cta-button .banner-cta-button-content:first-child {
+.my-btn .banner-cta-button-content:first-child {
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.5);
 }
-.page-banner-cta-button .banner-cta-button-content:nth-child(2) {
+.my-btn .banner-cta-button-content:nth-child(2) {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
   background-color: #fff;
   color: #272727;
-  border: 2px solid #272727;
+  border: 2px solid #fff;
 }
 .banner-cta-button-content {
   display: flex;
   align-content: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  height: auto;
+  height: 100%;
   color: #fff;
   border: #fff 2px solid;
   border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 .banner-cta-button-content.fade-in {
