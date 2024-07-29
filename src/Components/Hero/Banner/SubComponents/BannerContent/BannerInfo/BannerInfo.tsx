@@ -4,7 +4,7 @@ import card_img from "../../../../../../assets/images/banner_card_placeholder.jp
 
 const BannerInfo = () => {
   return (
-    <div className="col-lg-6 page-banner-info">
+    <div className="col-lg-6 col-md-12 page-banner-info">
       <div>
         <BannerCard
           img_src={card_img}

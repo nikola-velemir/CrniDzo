@@ -3,6 +3,7 @@ import { CarouselImageContext } from "../Components/Context/Providers/CarouselIm
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import PageBanner from "../Components/Hero/Banner/PageBanner";
+import MenuDisplay from "../Components/Displays/MenuDisplay";
 
 const Home = () => {
   const imageContext = useContext(CarouselImageContext);
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar></Navbar>
       {/* <Carousel images={imageContext.landing.carousel}></Carousel> */}
       <PageBanner></PageBanner>
+      <MenuDisplay></MenuDisplay>
       <Footer></Footer>
     </>
   );

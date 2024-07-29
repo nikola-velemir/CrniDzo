@@ -5,7 +5,7 @@ import eye_icon_hovered from "../../../../../../assets/icons/eye-fill-hovered.sv
 
 const BannerCta = () => {
   return (
-    <div className="col-lg-6 page-banner-cta">
+    <div className="col-lg-6 col-md-12 page-banner-cta">
       <div>
         <BannerCtaText></BannerCtaText>
         <BannerCtaButton

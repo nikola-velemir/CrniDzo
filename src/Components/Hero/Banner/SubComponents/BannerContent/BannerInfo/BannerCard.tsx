@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type BannerCardProps = {
   img_src: string;
   card_title: string;
@@ -5,6 +7,7 @@ type BannerCardProps = {
 };
 
 const BannerCard = ({ img_src, card_title, card_text }: BannerCardProps) => {
+  const [hover, setHover] = useState(false);
   return (
     <div className="card banner-card">
       <div>
@@ -15,9 +18,30 @@ const BannerCard = ({ img_src, card_title, card_text }: BannerCardProps) => {
               <h5 className="card-title">{card_title}</h5>
             </div>
             <div>
-              <a href="#" className="btn my-btn">
-                <div className="banner-cta-button-content">Learn More</div>
-                <div className="banner-cta-button-content">Learn More</div>
+              <a
+                href="#"
+                className="btn my-btn"
+                onMouseOver={() => {
+                  setHover(true);
+                }}
+                onMouseLeave={() => {
+                  setHover(false);
+                }}
+              >
+                <div
+                  className={`banner-cta-button-content ${
+                    hover ? "fade-out" : "fade-in"
+                  }`}
+                >
+                  Learn More
+                </div>
+                <div
+                  className={`banner-cta-button-content ${
+                    hover ? "fade-in" : "fade-out"
+                  }`}
+                >
+                  Learn More
+                </div>
               </a>
             </div>
           </div>
