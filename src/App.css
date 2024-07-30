@@ -622,8 +622,8 @@ footer .footer-link-icon {
   width: 100%;
   background-color: transparent;
   backdrop-filter: blur(3px);
-  color: #fff;
-  border: 0.5px solid #fff;
+  color: #272727;
+  border: 0.5px solid transparent;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -631,17 +631,61 @@ footer .footer-link-icon {
     rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
 }
 .menu-display-card:hover {
-  transform: translateY(-10px);
+  backdrop-filter: blur(6px);
+  transform: translateY(-5px);
   box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
 }
-
+.menu-display-card .card-title {
+  font-size: 120%;
+}
+.menu-display-card .text-cta {
+  display: flex;
+  border-bottom: 2px dotted #272727;
+  border-top: 2px dotted #272727;
+}
+.menu-display-card .card-text {
+  border-right: 2px dotted #272727;
+  font-size: 0.9rem;
+}
+.menu-display-card .btn {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.menu-display-card .btn div {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  border: 2px solid #272727;
+  padding: 0.25rem;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+.menu-display-card .btn div.fade-in {
+  opacity: 1;
+}
+.menu-display-card .btn div.fade-out {
+  opacity: 0;
+}
+.menu-display-card .btn div:nth-child(2) {
+  position: absolute;
+  background-color: #fff;
+}
+.menu-display-card .btn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
 .menu-display-title {
   color: #f59846;
   font-family: "Ultra";
   font-size: 3rem;
   text-align: center;
   letter-spacing: 2px;
+}
+.main-menu-display-card > img {
+  width: 100%;
 }
 .menu-display-caption {
   color: white;
