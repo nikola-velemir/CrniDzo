@@ -617,6 +617,9 @@ footer .footer-link-icon {
 .menu-display .row > div {
   padding: 1rem;
 }
+.menu-main-display-card {
+  margin-top: 1rem;
+}
 .menu-display-card {
   height: 100%;
   width: 100%;
@@ -686,6 +689,7 @@ footer .footer-link-icon {
 }
 .main-menu-display-card > img {
   width: 100%;
+  height: 50%;
 }
 .menu-display-caption {
   color: white;

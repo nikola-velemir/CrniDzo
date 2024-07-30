@@ -1,5 +1,3 @@
-import React from "react";
-
 type MenuMainDisplayCardProps = {
   img_src: string;
   title: string;
