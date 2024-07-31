@@ -1,4 +1,4 @@
-import texture from "../../assets/textures/papertexture.jpg";
+import texture from "../../../assets/textures/papertexture.jpg";
 import MenuDisplayContent from "./SubComponents/MenuDisplayContent";
 import MenuDisplayTitle from "./SubComponents/MenuDisplayTitle";
 

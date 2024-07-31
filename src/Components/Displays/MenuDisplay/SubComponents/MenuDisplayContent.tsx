@@ -1,11 +1,11 @@
 import MenuDisplayCard from "./MenuDisplayCard";
-import mm from "../../../assets/images/menumaindisplay.jpg";
-import md1 from "../../../assets/images/menudisplay1.png";
-import md2 from "../../../assets/images/menudisplay2.jpg";
-import md3 from "../../../assets/images/menudisplay3.jpg";
-import md4 from "../../../assets/images/menudisplay4.jpg";
+import mm from "../../../../assets/images/menumaindisplay.jpg";
+import md1 from "../../../../assets/images/menudisplay1.png";
+import md2 from "../../../../assets/images/menudisplay2.jpg";
+import md3 from "../../../../assets/images/menudisplay3.jpg";
+import md4 from "../../../../assets/images/menudisplay4.jpg";
 import { useContext } from "react";
-import { MenuThemeContext } from "../../Context/Providers/MenuThemeContext";
+import { MenuThemeContext } from "../../../Context/Providers/MenuThemeContext";
 import MenuMainDisplayCard from "./MenuMainDisplayCard";
 
 const MenuDisplayContent = () => {

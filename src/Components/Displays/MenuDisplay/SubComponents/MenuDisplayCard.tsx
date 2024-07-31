@@ -1,5 +1,5 @@
-import carret from "../../../assets/icons/caret-right-fill.svg";
-import carret_hovered from "../../../assets/icons/caret-right-fill-hovered.svg";
+import carret from "../../../../assets/icons/caret-right-fill.svg";
+import carret_hovered from "../../../../assets/icons/caret-right-fill-hovered.svg";
 import { useState } from "react";
 
 type MenuDisplayCardProps = {

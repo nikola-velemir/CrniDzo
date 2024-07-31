@@ -781,6 +781,34 @@ footer .footer-link-icon {
   font-family: "Ultra";
   letter-spacing: 2px;
 }
+.location-display {
+  color: #fff;
+  & > .row {
+    width: 95%;
+    margin: 0 auto;
+    & > div {
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+.location-display-text {
+  text-align: center;
+  & .row > div {
+    &:first-child {
+      font-family: "Ultra";
+    }
+    &:nth-child(2) {
+      font-family: "Ultra";
+      font-size: 3rem;
+      color: #f59846;
+    }
+    &:nth-child(n + 3) {
+      text-align: left;
+    }
+  }
+}
+
 @media only screen and (max-width: 990px) {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
