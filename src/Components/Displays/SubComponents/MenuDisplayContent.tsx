@@ -16,7 +16,7 @@ const MenuDisplayContent = () => {
         <MenuMainDisplayCard
           title={"Ponude"}
           text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit commodo lacinia."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum aliquam nisl posuere condimentum. Vestibulum et ex varius, viverra ligula at, volutpat est. Aenean eros nisl, interdum quis leo eu, dignissim posuere sapien. Vivamus eget molestie turpis. Morbi feugiat pharetra efficitur. "
           }
           theme_color={themes.main}
           img_src={mm}
