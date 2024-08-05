@@ -666,6 +666,7 @@ footer .footer-link-icon {
       align-items: center;
       justify-content: space-between;
       transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      font-size: 1.2rem;
       &.fade-in {
         opacity: 1;
       }
@@ -679,7 +680,8 @@ footer .footer-link-icon {
         right: 0;
         left: 0;
         & > * {
-          background-color: #fff;
+          color: #f59846;
+          background-color: #272727;
         }
       }
       & > div {
@@ -757,7 +759,7 @@ footer .footer-link-icon {
     }
     & div:nth-child(2) {
       position: absolute;
-      background-color: #fff;
+      background-color: #272727;
     }
     & img {
       width: 100%;
@@ -782,19 +784,33 @@ footer .footer-link-icon {
   letter-spacing: 2px;
 }
 .location-display {
+  position: relative;
   color: #fff;
   & > .row {
     width: 95%;
     margin: 0 auto;
     & > div {
+      padding: 1.5rem;
       display: grid;
       place-items: center;
+      z-index: 2;
     }
   }
+}
+.location-display-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(2px) brightness(50%);
+
+  z-index: 1;
 }
 .location-display-text {
   text-align: center;
   & .row > div {
+    letter-spacing: 2px;
     &:first-child {
       font-family: "Ultra";
     }
@@ -805,10 +821,50 @@ footer .footer-link-icon {
     }
     &:nth-child(n + 3) {
       text-align: left;
+      letter-spacing: 1px;
     }
   }
 }
+.location-display-content {
+  width: 100%;
+  height: 100%;
+  & .location-display-content-buttons {
+    .row {
+      & .my-btn {
+        width: 100%;
+        height: 3.5rem;
+        padding: unset;
+        font-size: 1.2rem;
 
+        & > .banner-cta-button-content {
+          border-right: none;
+          border-radius: 0.5rem 0rem 0rem 0rem;
+          padding: unset;
+          &:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+          }
+          &.fade-in {
+            opacity: 1;
+          }
+          &.fade-out {
+            opacity: 0;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & .banner-cta-button-content {
+          padding: unset;
+          border-right: 2px solid #fff;
+          border-radius: 0rem 0.5rem 0rem 0rem;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 990px) {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
