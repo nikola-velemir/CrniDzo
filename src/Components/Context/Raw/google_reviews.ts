@@ -1,4 +1,4 @@
-import img from "../../../assets/images/user-pfp.jpg";
+import img from "../../../assets/icons/person-circle.svg";
 
 export const google_reviews = [
   {

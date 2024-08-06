@@ -1,13 +1,12 @@
-import { useContext } from "react";
-import { CarouselImageContext } from "../Components/Context/Providers/CarouselImageContext";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import PageBanner from "../Components/Hero/Banner/PageBanner";
 import MenuDisplay from "../Components/Displays/MenuDisplay/MenuDisplay";
 import LocationDisplay from "../Components/Displays/LocationDisplay/LocationDisplay";
+import ReviewsDisplay from "../Components/Displays/ReviewsDisplay/ReviewsDisplay";
 
 const Home = () => {
-  const imageContext = useContext(CarouselImageContext);
+  // const imageContext = useContext(CarouselImageContext);
   return (
     <>
       <Navbar></Navbar>
@@ -15,6 +14,7 @@ const Home = () => {
       <PageBanner></PageBanner>
       <MenuDisplay></MenuDisplay>
       <LocationDisplay></LocationDisplay>
+      <ReviewsDisplay></ReviewsDisplay>
       <Footer></Footer>
     </>
   );

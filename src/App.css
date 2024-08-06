@@ -903,10 +903,90 @@ footer .footer-link-icon {
   padding: 0.5rem;
   border: 2px solid #fff;
   border-radius: 1rem;
+  background-color: rgba(39, 39, 39, 0.75);
   overflow: hidden;
+  filter: none;
+  backdrop-filter: blur(5px);
+
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+    backdrop-filter: blur(8px);
+
+    background-color: rgba(39, 39, 39, 0.5);
+  }
+  color: #fff;
   & > div {
     width: 100%;
-    border-bottom: 2px solid #fff;
+    padding: 0.5rem;
+  }
+  & .review-rating {
+    & > img {
+      padding: 0rem 0.5rem;
+      width: 2.5rem;
+    }
+  }
+  & .review-user {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    & > img {
+      width: 3rem;
+      height: 3rem;
+    }
+    & > div {
+      width: calc(100% - 3rem);
+      padding: 0rem 1rem;
+    }
+  }
+}
+.reviews-display {
+  /* background: linear-gradient(#272727, #f59846c7); */
+  position: relative;
+  padding: 2rem 0rem;
+  & .reviews-display-filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    filter: blur(3px);
+
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  & > .row {
+    filter: none;
+    width: 95%;
+    margin: 0 auto;
+
+    & > div {
+      padding: 1rem;
+      &:first-child {
+        margin: 5vh 0vh;
+      }
+      &:nth-child(n + 2) {
+        margin-bottom: 5vh;
+      }
+    }
+    & > .review-section-title {
+      color: #f59846;
+      z-index: 2;
+      font-size: 3rem;
+      text-align: center;
+      font-family: "Ultra";
+    }
   }
 }
 @media only screen and (max-width: 990px) {
