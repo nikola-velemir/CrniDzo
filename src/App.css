@@ -993,6 +993,10 @@ footer .footer-link-icon {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
   }
+  .page-banner-cta > div {
+    padding: 10%;
+    margin-top: 10%;
+  }
   .nav-item {
     &::after {
       left: 0;
