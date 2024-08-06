@@ -1,5 +1,3 @@
-import React from "react";
-
 const ReviewsDisplay = () => {
   return (
     <div className="container-fluid">

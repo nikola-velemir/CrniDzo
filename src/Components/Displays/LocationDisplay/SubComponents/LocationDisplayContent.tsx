@@ -1,15 +1,13 @@
 import Carousel from "../../../Carousel/Carousel";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { LocationDisplayImagesContext } from "../../../Context/Providers/LocationDisplayImagesContext";
 
 type LocationDisplayContentProps = {
   carouselVisible: boolean;
-  mapVisible: boolean;
 };
 
 const LocationDisplayContent = ({
   carouselVisible,
-  mapVisible,
 }: LocationDisplayContentProps) => {
   const locationDisplayContext = useContext(LocationDisplayImagesContext);
   return (

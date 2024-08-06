@@ -76,7 +76,6 @@ const LocationDisplay: React.FC = () => {
             </div>
             <LocationDisplayContent
               carouselVisible={isCarouselSelected}
-              mapVisible={!isCarouselSelected}
             ></LocationDisplayContent>
           </div>
         </div>
