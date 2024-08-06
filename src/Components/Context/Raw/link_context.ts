@@ -1,11 +1,11 @@
 const links = [
   {
     name: "naslovna",
-    link: "http://localhost:5173",
+    link: "#",
   },
   {
     name: "mENI",
-    link: "https//localhost:5173",
+    link: "#",
   },
   {
     name: "O nama",
@@ -13,7 +13,7 @@ const links = [
   },
   {
     name: "Drugo",
-    link: "https://kolapsigraonica.000webhostapp.com/",
+    link: "#",
   },
 ];
 
