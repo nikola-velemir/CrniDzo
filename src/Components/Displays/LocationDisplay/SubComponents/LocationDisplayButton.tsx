@@ -2,12 +2,16 @@ import React, { useState } from "react";
 
 interface LocationDisplayButtonProps {
   text: string;
+  icon: string;
+  icon_hovered: string;
   isClicked: boolean;
   onClick: () => void;
 }
 
 const LocationDisplayButton: React.FC<LocationDisplayButtonProps> = ({
   text,
+  icon,
+  icon_hovered,
   isClicked,
   onClick,
 }) => {
@@ -26,14 +30,20 @@ const LocationDisplayButton: React.FC<LocationDisplayButtonProps> = ({
           isHovered || isClicked ? "fade-out" : "fade-in"
         }`}
       >
-        {text}
+        <div>
+          <img src={icon} />
+        </div>
+        <div>{text}</div>
       </div>
       <div
         className={`banner-cta-button-content ${
           isHovered || isClicked ? "fade-in" : "fade-out"
         }`}
       >
-        {text}
+        <div>
+          <img src={icon_hovered} />
+        </div>
+        <div>{text}</div>
       </div>
     </button>
   );

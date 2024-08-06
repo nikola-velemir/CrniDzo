@@ -16,7 +16,6 @@ const Carousel = ({ images }: CarouselProps) => {
             </div>
           );
         })}
-        ;
       </div>
 
       <button
