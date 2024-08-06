@@ -612,7 +612,13 @@ footer .footer-link-icon {
   & > .row > div {
     margin-top: 5vh;
     padding: 0rem 1rem;
+    &.col-lg-6.col-md-12 {
+      display: grid;
+      align-items: center;
+      align-content: center;
+    }
   }
+
   & .row > div {
     padding: 1rem;
   }
