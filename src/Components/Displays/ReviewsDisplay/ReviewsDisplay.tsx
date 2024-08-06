@@ -20,7 +20,7 @@ const ReviewsDisplay = () => {
         }}
       ></div>
       <div className="row">
-        <div className="col-12 review-section-title">Vase price, nas uspeh</div>
+        <div className="col-12 review-section-title">Vaše price, naš uspeh</div>
         {userContext.map(
           ({ pfp, first_name, last_name, comment, rating }, index) => {
             return (
