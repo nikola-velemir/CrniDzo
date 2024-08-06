@@ -989,6 +989,18 @@ footer .footer-link-icon {
     }
   }
 }
+@media only screen and (max-width: 575px) {
+  .menu-display {
+    width: 100%;
+    & > .row {
+      width: 100%;
+      margin: 0 auto;
+    }
+    & > div > div .row > div {
+      padding: 0rem;
+    }
+  }
+}
 @media only screen and (max-width: 990px) {
   .navbar.navbar-expand-lg > .container-fluid {
     width: 100%;
