@@ -997,7 +997,7 @@ footer .footer-link-icon {
       margin: 0 auto;
     }
     & > div > div .row > div {
-      padding: 0rem 0.5rem !important;
+      padding: 1rem 0rem !important;
     }
   }
 }
