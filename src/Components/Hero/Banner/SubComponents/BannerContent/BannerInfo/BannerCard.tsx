@@ -33,14 +33,14 @@ const BannerCard = ({ img_src, card_title, card_text }: BannerCardProps) => {
                     hover ? "fade-out" : "fade-in"
                   }`}
                 >
-                  Learn More
+                  Vise
                 </div>
                 <div
                   className={`banner-cta-button-content ${
                     hover ? "fade-in" : "fade-out"
                   }`}
                 >
-                  Learn More
+                  Vise
                 </div>
               </a>
             </div>
