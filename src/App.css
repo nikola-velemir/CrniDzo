@@ -1020,4 +1020,30 @@ footer .footer-link-icon {
   .page-banner {
     height: fit-content;
   }
+  .location-display {
+    width: 100%;
+    & > .row {
+      & > div:first-child {
+        padding: 5rem 0rem 2.5rem 0rem;
+      }
+      & > div:last-child {
+        padding: 2.5rem 0rem 5rem 0rem;
+      }
+    }
+  }
+  .menu-display {
+    width: 100%;
+    & > .row {
+      width: 100%;
+      margin: 0 auto;
+    }
+    & > div > div:nth-child(n + 3) .row > div {
+      &:nth-child(2n + 1) {
+        padding-left: 0rem;
+      }
+      &:nth-child(2n) {
+        padding-right: 0rem;
+      }
+    }
+  }
 }
