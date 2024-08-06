@@ -11,7 +11,7 @@ const BannerInfo = () => {
           card_text={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mattis nulla ac tortor pulvinar mattis. Proin eget euismod purus, non egestas massa."
           }
-          card_title={"Primer"}
+          card_title={"Primer 1"}
         ></BannerCard>
       </div>
     </div>
