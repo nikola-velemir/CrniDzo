@@ -830,7 +830,8 @@ footer .footer-link-icon {
 .location-display-content {
   width: 100%;
   height: 100%;
-
+  border-radius: 1rem;
+  overflow: hidden;
   display: flex;
   align-content: flex-start;
   & .location-display-content-buttons {
@@ -844,7 +845,7 @@ footer .footer-link-icon {
 
         & > .banner-cta-button-content {
           border-right: none;
-          border-radius: 0.5rem 0rem 0rem 0rem;
+          border-radius: 1rem 0rem 0rem 0rem;
           padding: unset;
           &:nth-child(2) {
             position: absolute;
@@ -866,7 +867,7 @@ footer .footer-link-icon {
           padding: unset;
           border-left: none;
           border-right: 2px solid #fff;
-          border-radius: 0rem 0.5rem 0rem 0rem;
+          border-radius: 0rem 1rem 0rem 0rem;
         }
       }
     }
@@ -895,6 +896,17 @@ footer .footer-link-icon {
     &.fade-out {
       opacity: 0;
     }
+  }
+}
+.goolge-review-card {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  & > div {
+    width: 100%;
+    border-bottom: 2px solid #fff;
   }
 }
 @media only screen and (max-width: 990px) {
