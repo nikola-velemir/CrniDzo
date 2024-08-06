@@ -995,7 +995,7 @@ footer .footer-link-icon {
   }
   .page-banner-cta > div {
     padding: 10%;
-    margin-top: 10%;
+    margin-top: 10vh;
   }
   .nav-item {
     &::after {
