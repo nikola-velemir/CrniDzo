@@ -15,7 +15,7 @@ const FooterSocialMedia = ({
   const icons = [icon_regular, icon_hovered];
   const effectClasses = ["fade-in", "fade-out"];
   return (
-    <div className="col-lg-12 col-md-4 col-sm-4 social-media-section">
+    <div className="col-lg-12 col-md-4 col-sm-4 col-xs-4 social-media-section">
       <a
         className="footer-link-icon"
         href={link}
