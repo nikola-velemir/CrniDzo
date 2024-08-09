@@ -19,6 +19,12 @@ const MenuDisplayCard = ({
   return (
     <div
       className="card menu-display-card"
+      onMouseOver={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+      }}
       style={{ backgroundColor: theme_color }}
     >
       <img src={img_src} className="card-img-top" alt="..." />
@@ -26,16 +32,7 @@ const MenuDisplayCard = ({
         <h5 className="card-title">{title}</h5>
         <div className="text-cta">
           <p className="card-text">{text}</p>
-          <a
-            href="#"
-            className="btn"
-            onMouseOver={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          >
+          <a href="#" className="btn">
             <div className={isHovered ? "fade-out" : "fade-in"}>
               <img src={carret} alt="..."></img>
             </div>

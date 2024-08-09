@@ -1,6 +1,5 @@
 import texture from "../../../assets/textures/papertexture.jpg";
 import MenuDisplayContent from "./SubComponents/MenuDisplayContent";
-import MenuDisplayTitle from "./SubComponents/MenuDisplayTitle";
 
 const MenuDisplay = () => {
   return (
@@ -11,7 +10,7 @@ const MenuDisplay = () => {
       }}
     >
       <div className="row">
-        <MenuDisplayTitle></MenuDisplayTitle>
+        {/* <MenuDisplayTitle></MenuDisplayTitle> */}
         <MenuDisplayContent></MenuDisplayContent>
       </div>
     </div>
