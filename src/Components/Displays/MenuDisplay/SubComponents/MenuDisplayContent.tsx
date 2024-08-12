@@ -1,4 +1,4 @@
-import MenuDisplayCard from "./MenuDisplayCard";
+import MenuDisplayCard from "./MenuDisplayCard/MenuDisplayCard";
 import { useContext } from "react";
 import { MenuCategoriesContext } from "../../../Context/Providers/MenuCategoriesContext";
 import MenuDisplayTitle from "./MenuDisplayTitle";
