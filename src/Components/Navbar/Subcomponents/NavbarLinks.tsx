@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Capitalize } from "../../../Utils/utils";
 
 type NavbarLinksProps = {
@@ -14,15 +15,15 @@ const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
         {links.map(({ name, link }, index) => {
           return (
             <li key={name} className="nav-item">
-              <a
+              <Link
+                to={link}
                 className={
                   index === currentPage ? "nav-link active" : "nav-link"
                 }
                 aria-current="page"
-                href={link}
               >
                 {Capitalize(name)}
-              </a>
+              </Link>
             </li>
           );
         })}

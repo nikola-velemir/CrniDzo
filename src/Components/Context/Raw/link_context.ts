@@ -1,19 +1,11 @@
 const links = [
   {
     name: "naslovna",
-    link: "#",
-  },
-  {
-    name: "mENI",
-    link: "#",
+    link: "/",
   },
   {
     name: "O nama",
-    link: "#",
-  },
-  {
-    name: "Drugo",
-    link: "#",
+    link: "/about-us",
   },
 ];
 
