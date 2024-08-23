@@ -1,6 +1,6 @@
 import BannerCard from "./BannerCard";
 
-import card_img from "../../../../../../assets/images/banner_card_placeholder.jpg";
+import card_img from "../../../../../../../assets/images/banner_card_placeholder.jpg";
 
 const BannerInfo = () => {
   return (

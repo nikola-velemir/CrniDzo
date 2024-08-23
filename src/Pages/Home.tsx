@@ -1,6 +1,6 @@
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
-import FrontPageBanner from "../Components/Hero/Banner/PageBanner";
+import FrontPageBanner from "../Components/Hero/Banner/FrontPageBanner/PageBanner";
 import MenuDisplay from "../Components/Displays/MenuDisplay/MenuDisplay";
 import LocationDisplay from "../Components/Displays/LocationDisplay/LocationDisplay";
 import ReviewsDisplay from "../Components/Displays/ReviewsDisplay/ReviewsDisplay";

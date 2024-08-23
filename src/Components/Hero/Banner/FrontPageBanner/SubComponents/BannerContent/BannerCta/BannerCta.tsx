@@ -1,7 +1,7 @@
 import BannerCtaText from "./BannerCtaText";
 import BannerCtaButton from "./BannerCtaButton";
-import eye_icon from "../../../../../../assets/icons/eye-fill.svg";
-import eye_icon_hovered from "../../../../../../assets/icons/eye-fill-hovered.svg";
+import eye_icon from "../../../../../../../assets/icons/eye-fill.svg";
+import eye_icon_hovered from "../../../../../../../assets/icons/eye-fill-hovered.svg";
 
 const BannerCta = () => {
   return (
