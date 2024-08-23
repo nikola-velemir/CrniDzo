@@ -4,6 +4,10 @@ const links = [
     link: "/",
   },
   {
+    name: "Meni",
+    link: "/menu",
+  },
+  {
     name: "O nama",
     link: "/about-us",
   },

@@ -108,7 +108,7 @@ body {
   background-color: #272727;
 }
 .navbar-nav .nav-link.active {
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .nav-item:has(.nav-link.nav-link.active) {
   &:after {

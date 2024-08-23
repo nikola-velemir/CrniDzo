@@ -13,6 +13,7 @@ const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         {links.map(({ name, link }, index) => {
+          console.log(link);
           return (
             <li key={name} className="nav-item">
               <Link

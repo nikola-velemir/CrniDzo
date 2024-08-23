@@ -1,6 +1,6 @@
 import BannerContent from "./SubComponents/BannerContent/BannerContent";
 import BannerFilter from "./SubComponents/BannerFilter/BannerFilter";
-const PageBanner = () => {
+const FrontPageBanner = () => {
   return (
     <div className="page-banner">
       <BannerFilter></BannerFilter>
@@ -9,4 +9,4 @@ const PageBanner = () => {
   );
 };
 
-export default PageBanner;
+export default FrontPageBanner;
