@@ -107,8 +107,62 @@
 body {
   background-color: #272727;
 }
-.navbar-nav .nav-link.active {
-  /* font-weight: 600; */
+.menu-banner {
+  position: relative;
+
+  & .menu-banner-filter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+
+    & .menu-banner-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-content: center;
+      & > .container-fluid {
+        width: 95%;
+        & .row > div > div {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  & .menu-banner-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.offcanvas {
+  .offcanvas-header {
+    & .offcanvas-title {
+      font-size: 2rem;
+    }
+  }
+  .offcanvas-body {
+    padding: 0rem 0.5rem;
+  }
+  & .list-group {
+    border: none;
+    border-radius: 0;
+    & .list-group-item {
+      border: none;
+      border-bottom: 2px dotted #272727;
+    }
+  }
 }
 .nav-item:has(.nav-link.nav-link.active) {
   &:after {

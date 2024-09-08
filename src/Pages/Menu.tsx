@@ -1,18 +1,13 @@
-import LocationDisplay from "../Components/Displays/LocationDisplay/LocationDisplay";
-import MenuDisplay from "../Components/Displays/MenuDisplay/MenuDisplay";
-import ReviewsDisplay from "../Components/Displays/ReviewsDisplay/ReviewsDisplay";
 import Footer from "../Components/Footer/Footer";
-import FrontPageBanner from "../Components/Hero/Banner/FrontPageBanner/PageBanner";
-import Navbar from "../Components/Navbar/Navbar";
+import MenuPageBanner from "../Components/Hero/Banner/MenuPageBanner/MenuPageBanner";
+import Categories from "../Components/Menu/SubComponents/Categories";
 
 const Menu = () => {
   return (
     <>
-      <Navbar currentPage={1}></Navbar>
-      <FrontPageBanner></FrontPageBanner>
-      <MenuDisplay></MenuDisplay>
-      <LocationDisplay></LocationDisplay>
-      <ReviewsDisplay></ReviewsDisplay>
+      <MenuPageBanner></MenuPageBanner>
+      <Categories></Categories>
+
       <Footer></Footer>
     </>
   );

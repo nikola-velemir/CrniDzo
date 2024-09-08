@@ -26,7 +26,7 @@ const Navbar = ({ currentPage = 0 }: NavbarProps) => {
           />
           <NavbarButton />
           <Link to="/"></Link>
-          <NavbarLinks links={links} currentPage={currentPage} />
+          <NavbarLinks links={links} />
         </div>
       </nav>
       <Outlet />

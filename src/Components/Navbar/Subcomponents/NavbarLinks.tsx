@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import { Capitalize } from "../../../Utils/utils";
+import { useState } from "react";
 
 type NavbarLinksProps = {
   links: { name: string; link: string }[];
-  currentPage: number;
 };
 
 // Example usage
 
-const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
+const NavbarLinks = ({ links }: NavbarLinksProps) => {
+  const [currentPage, setCurrentPage] = useState(0);
   return (
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         {links.map(({ name, link }, index) => {
-          console.log(link);
           return (
             <li key={name} className="nav-item">
               <Link
@@ -22,6 +22,9 @@ const NavbarLinks = ({ links, currentPage }: NavbarLinksProps) => {
                   index === currentPage ? "nav-link active" : "nav-link"
                 }
                 aria-current="page"
+                onClick={() => {
+                  setCurrentPage(index);
+                }}
               >
                 {Capitalize(name)}
               </Link>
